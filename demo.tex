@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, aspectraio=169]{beamer}  % 设置分辨率为16:9
+\usetheme[progressbar=frametitle, sectionpage=none]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\usepackage[noindent]{ctexcap}
+\renewcommand\CJKfamilydefault{\CJKsfdefault}
+\setbeamertemplate{frame footer}{\insertshortauthor~\insertshortinstitute~\insertshorttitle}
+\setbeamerfont{page number in head/foot}{size=\tiny}
+\setbeamercolor{footline}{fg=gray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{演讲模板}
+\subtitle{}
+\date{\today}
+\author{Morrowind}
+% \institute{BUAA}  % 设置机构名
+\titlegraphic{\hfill\includegraphics[height=1.5cm]{buaamark.eps}}  % 设置机构图标
+\begin{document}
+\maketitle
+
+\begin{frame}{目录}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{列表}
+\begin{frame}{列表}
+    \begin{columns}[T,onlytextwidth]
+        \column{0.33\textwidth}
+            项
+            \begin{itemize}
+                \item Milk \item Eggs \item Potatos
+            \end{itemize}
+    
+        \column{0.33\textwidth}
+            枚举
+            \begin{enumerate}
+                \item First, \item Second and \item Last.
+            \end{enumerate}
+    
+        \column{0.33\textwidth}
+            描述
+            \begin{description}
+                \item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
+            \end{description}
+    \end{columns}
+\end{frame}
+
+\section{字符控制}
+\begin{frame}{字符控制}
+    \emph{强调}
+
+    \textbf{加粗}
+
+    \alert{变色}
+\end{frame}
+
+\section{表格}
+\begin{frame}{表格}
+    \begin{table}
+        \caption{Largest cities in the world (source: Wikipedia)}
+        \begin{tabular}{lr}
+            \toprule
+            City & Population\\
+            \midrule
+            Mexico City & 20,116,842\\
+            Shanghai & 19,210,000\\
+            Peking & 15,796,450\\
+            Istanbul & 14,160,467\\
+            \bottomrule
+        \end{tabular}
+      \end{table}
+\end{frame}
+
+\section{块}
+\begin{frame}{块}
+    左右两侧分别是不填充背景色以及填充背景色的块。
+    \begin{columns}[T,onlytextwidth]
+        \column{0.5\textwidth}
+            \begin{block}{Default}
+                Block content.
+            \end{block}
+            \begin{alertblock}{Alert}
+                Block content.
+            \end{alertblock}
+            \begin{exampleblock}{Example}
+                Block content.
+            \end{exampleblock}
+
+        \column{0.5\textwidth}
+            \metroset{block=fill}
+            \begin{block}{Default}
+                Block content.
+            \end{block}
+            \begin{alertblock}{Alert}
+                Block content.
+            \end{alertblock}
+            \begin{exampleblock}{Example}
+                Block content.
+            \end{exampleblock}
+    \end{columns}
+\end{frame}
+
+\section{公式}
+\begin{frame}{公式}
+    \begin{equation*}
+        e^{i\pi} + 1 = 0
+    \end{equation*}
+\end{frame}
+
+% {\setbeamercolor{palette primary}{fg=black, bg=white}
+\begin{frame}[standout]
+  谢谢
+\end{frame}
+% }
+
+\end{document}
